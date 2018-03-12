@@ -1,1 +1,4 @@
-export default (it, el) => el.appendChild(it);
+export default (it, el) => {
+  el.innerHTML = "";
+  el.appendChild(it);
+};

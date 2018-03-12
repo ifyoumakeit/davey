@@ -6,6 +6,6 @@
 - [x] Click Handlers
 - [ ] CSS-in-JS
 - [ ] VDOM
-- [ ] State management
+- [x] State management
 - [x] Arrays / Multiple children
 
