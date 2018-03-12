@@ -1,5 +1,18 @@
-import reduceProps from "./reduce_props";
 import { isEvent, EVENTS } from "./util";
+
+const addEventListener = (el, eventType, handler) => {
+  el.addEventListener(eventType, handler);
+};
+
+const setAttribute = (el, key, val) => {
+  el.setAttribute(key, val);
+};
+
+const appendStyles = (el, styles) => {
+  for (const key in styles) {
+    el.style[key] = styles[key];
+  }
+};
 
 const appendChildren = (el, children = "") => {
   if (!children) return el;
@@ -16,15 +29,12 @@ const addListenersAndAttributes = (el, props = {}) => {
   if (!props) return el;
 
   for (const key in props) {
-    if (isEvent(key)) {
-      el.addEventListener(EVENTS[key], props[key]);
-    } else if (key === "style") {
-      for (const k in props[key]) {
-        el.style[k] = props[key][k];
-      }
-    } else {
-      el.setAttribute(key, props[key]);
-    }
+    const val = props[key];
+    (({
+      onClick: addEventListener.bind(this, el, "click", val),
+      onBlur: addEventListener.bind(this, el, "blur", val),
+      style: appendStyles.bind(this, el, val),
+    }[key] || setAttribute.bind(this, el, key, val))());
   }
   return el;
 };
