@@ -7,4 +7,5 @@
 - [ ] CSS-in-JS
 - [ ] VDOM
 - [ ] State management
+- [x] Arrays / Multiple children
 

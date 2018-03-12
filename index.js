@@ -7,7 +7,8 @@ const Button = ({ children, ...props }) => {
       onClick={evt => console.log(evt)}
       class="foo"
       style={{ backgroundColor: "black", color: "#fff" }}
-      children={props.children}
+      children={children}
+      {...props}
     />
   );
 };
