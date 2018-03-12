@@ -15,8 +15,6 @@ const appendStyles = (el, styles) => {
 };
 
 const appendChildren = (el, children = "") => {
-  if (!children) return el;
-
   if (children instanceof Element) {
     el.appendChild(children);
   } else {
@@ -42,6 +40,7 @@ const addListenersAndAttributes = (el, props = {}) => {
 export default (tag = "", _props, _children) => {
   const props = _props || {};
   const children = _children || props.children;
+  console.log({ tag, children });
 
   if (typeof tag === "function") {
     return tag({ ..._props, children });

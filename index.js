@@ -1,7 +1,7 @@
 import h from "./src/h";
 import render from "./src/render";
 
-const Bar = ({ hello, ...props }) => {
+const Button = ({ children, ...props }) => {
   return (
     <button
       onClick={evt => console.log(evt)}
@@ -13,8 +13,14 @@ const Bar = ({ hello, ...props }) => {
 };
 
 render(
-  <Bar>
-    <p>Hi</p>
-  </Bar>,
+  <main>
+    <header>
+      <h1>DAVI</h1>
+      <p>Dave's Alternative View Interpretation</p>
+    </header>
+    <article>
+      <Button>Click Me</Button>
+    </article>
+  </main>,
   document.querySelector("#root")
 );
