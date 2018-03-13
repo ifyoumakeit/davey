@@ -14,7 +14,7 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
 * [ ] Type some Typescript
 * [ ] Add a splash of CSS to my JS
 * [ ] Diff Dat Dom
-* [ ] Node business
+* [x] Basic Node business
 
 ---
 
@@ -23,6 +23,13 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
 
 ## Try it out
 
+### Client
+
 1.  `yarn`
 2.  `yarn build`
 3.  Open [http://localhost:1234](http://localhost:1234)
+
+### Server
+
+1. `yarn`
+2. `yarn babel-node davi.server.jsx`

@@ -33,9 +33,13 @@ const ensureArray = val => {
   return Array.isArray(val) ? val : [val];
 };
 
-const appendChildren = (el, children) => {
-  ensureArray(children).forEach(child => el.appendChild(getNode(child)));
+const appendChildren = (el, children = []) => {
+  children.forEach(child => el.appendChild(getNode(child)));
   return el;
+};
+
+const isBrowser = () => {
+  return typeof window !== "undefined" && window != null;
 };
 
 /**
@@ -66,9 +70,11 @@ const attachAttrs = (el, _props) => {
 
 export default (tag = "", _props, ..._children) => {
   const props = _props || {};
-  const children = _children.length ? _children : props.children;
+  const children = ensureArray(_children.length ? _children : props.children);
 
   return typeof tag === "function"
     ? tag({ ...props, children })
-    : attachAttrs(document.createElement(tag), { ...props, children });
+    : isBrowser()
+      ? attachAttrs(document.createElement(tag), { ...props, children })
+      : `<${tag}>${children.join("")}</${tag}>`;
 };
