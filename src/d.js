@@ -1,4 +1,15 @@
 /**
+ * OBJECT LOOPING
+ */
+
+const forEachObj = (obj, handler) => {
+  const keys = Object.keys(obj);
+  for (const i = 0; i < keys.length; i++) {
+    handler(obj[keys[i]], keys[i], obj);
+  }
+};
+
+/**
  * DOM HELPERS
  */
 
@@ -11,20 +22,19 @@ const setAttribute = (el, key, val) => {
 };
 
 const appendStyles = (el, styles) => {
-  for (const key in styles) {
-    el.style[key] = styles[key];
-  }
+  forEachObj(styles, (val, key) => (el.style[key] = val));
 };
 
 const getNode = el => {
   return el instanceof Element ? el : document.createTextNode(el);
 };
 
-const appendChildren = (el, children = []) => {
-  for (const index in children) {
-    el.appendChild(getNode(children[index]));
-  }
+const ensureArray = val => {
+  return Array.isArray(val) ? val : [val];
+};
 
+const appendChildren = (el, children) => {
+  ensureArray(children).forEach(child => el.appendChild(getNode(child)));
   return el;
 };
 
@@ -44,13 +54,9 @@ const getAttrFn = key => {
   return ATTR_FNS_MAP[key] || ATTR_FNS_MAP.__fallback__;
 };
 
-const attachAttrs = (el, props = {}) => {
-  if (!props) return el;
-
-  for (const key in props) {
-    getAttrFn(key)(el, props[key], key);
-  }
-
+const attachAttrs = (el, _props) => {
+  const props = _props || {};
+  forEachObj(props, (val, key) => getAttrFn(key)(el, val, key));
   return el;
 };
 
