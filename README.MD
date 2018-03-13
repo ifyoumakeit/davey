@@ -2,7 +2,9 @@
 
 **Dave's alternate view interpretation**
 
-Using my brain to recreate React and Redux from memory.
+Using my brain to recreate React and Redux from memory. I promise not to read any React or Redux docs or articles while creating this.
+
+(AKA Recreating the wheel)
 
 * [x] JSX
 * [x] Inline Styles
