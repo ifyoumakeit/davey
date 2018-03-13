@@ -6,14 +6,15 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
 
 (AKA Recreating the wheel)
 
-* [x] JSX
-* [x] Inline Styles
-* [x] Click Handlers
-* [x] State management
-* [x] Arrays / Multiple children
-* [ ] Use Typescript
-* [ ] CSS-in-JS
-* [ ] VDOM
+* [x] JX2JSX
+* [x] Stylin' inline
+* [x] Handle some clicks and blurs
+* [x] Basic state management
+* [x] Support multiple children
+* [ ] Type some Typescript
+* [ ] Add a splash of CSS to my JS
+* [ ] Diff Dat Dom
+* [ ] Node business
 
 ---
 
