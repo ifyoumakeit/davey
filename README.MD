@@ -2,7 +2,7 @@
 
 **Dave's alternate view interpretation**
 
-Using my brain to recreate React and Redux from memory. I promise not to read any React or Redux docs or articles while creating this.
+Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I promise not to read any React or Redux docs or articles while creating this.
 
 (AKA Recreating the wheel)
 
@@ -11,6 +11,7 @@ Using my brain to recreate React and Redux from memory. I promise not to read an
 * [x] Click Handlers
 * [x] State management
 * [x] Arrays / Multiple children
+* [ ] Use Typescript
 * [ ] CSS-in-JS
 * [ ] VDOM
 
