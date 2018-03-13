@@ -2,7 +2,7 @@
  * OBJECT LOOPING
  */
 
-const forEachObj = (obj, handler) => {
+const eachKey = (obj, handler) => {
   const keys = Object.keys(obj);
   for (let i = 0; i < keys.length; i++) {
     handler(obj[keys[i]], keys[i], obj);
@@ -13,29 +13,12 @@ const forEachObj = (obj, handler) => {
  * DOM HELPERS
  */
 
-const addEventListener = (el, eventType, handler) => {
-  el.addEventListener(eventType, handler);
-};
-
-const setAttribute = (el, key, val) => {
-  el.setAttribute(key, val);
-};
-
-const appendStyles = (el, styles) => {
-  forEachObj(styles, (val, key) => (el.style[key] = val));
-};
-
 const getNode = el => {
   return el instanceof Element ? el : document.createTextNode(el);
 };
 
 const ensureArray = val => {
   return Array.isArray(val) ? val : [val];
-};
-
-const appendChildren = (el, children = []) => {
-  children.forEach(child => el.appendChild(getNode(child)));
-  return el;
 };
 
 const isBrowser = () => {
@@ -47,11 +30,21 @@ const isBrowser = () => {
  */
 
 const ATTR_FNS_MAP = {
-  onClick: (el, val) => addEventListener(el, "click", val),
-  onBlur: (el, val) => addEventListener(el, "blur", val),
-  style: (el, val) => appendStyles(el, val),
-  children: (el, val) => appendChildren(el, val),
-  __fallback__: (el, val, key) => setAttribute(el, key, val),
+  onClick: (el, handler) => {
+    return el.addEventListener("click", handler);
+  },
+  onBlur: (el, handler) => {
+    return el.addEventListener("blur", handler);
+  },
+  style: (el, styles) => {
+    return eachKey(styles, (val, key) => (el.style[key] = val));
+  },
+  children: (el, children) => {
+    return children.forEach(child => el.appendChild(getNode(child)));
+  },
+  __fallback__: (el, val, key) => {
+    return el.setAttribute(key, val);
+  },
 };
 
 const getAttrFn = key => {
@@ -60,7 +53,7 @@ const getAttrFn = key => {
 
 const attachAttrs = (el, _props) => {
   const props = _props || {};
-  forEachObj(props, (val, key) => getAttrFn(key)(el, val, key));
+  eachKey(props, (val, key) => getAttrFn(key)(el, val, key));
   return el;
 };
 
