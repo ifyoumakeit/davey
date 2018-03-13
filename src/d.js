@@ -26,10 +26,10 @@ const isBrowser = () => {
 };
 
 /**
- * ATTRIBUTES
+ * CLIENT
  */
 
-const ATTR_FNS_MAP = {
+const ATTR_FNS_MAP_CLIENT = {
   onClick: (el, handler) => {
     return el.addEventListener("click", handler);
   },
@@ -47,14 +47,49 @@ const ATTR_FNS_MAP = {
   },
 };
 
-const getAttrFn = key => {
-  return ATTR_FNS_MAP[key] || ATTR_FNS_MAP.__fallback__;
+const getAttrFnClient = key => {
+  return ATTR_FNS_MAP_CLIENT[key] || ATTR_FNS_MAP_CLIENT.__fallback__;
 };
 
-const attachAttrs = (el, _props) => {
-  const props = _props || {};
-  eachKey(props, (val, key) => getAttrFn(key)(el, val, key));
+/**
+ * SERVER
+ */
+
+const ATTR_FNS_MAP_SERVER = {
+  style: styles => {
+    return `style="${Object.keys(styles).reduce((memo, key) => {
+      return `${memo}${key}:${styles[key]};`;
+    }, "")}"`;
+  },
+  class: (val, key) => {
+    return `${key}="${val}"`;
+  },
+  __fallback__: () => "",
+};
+
+const getAttrFnServer = key => {
+  return ATTR_FNS_MAP_SERVER[key] || ATTR_FNS_MAP_SERVER.__fallback__;
+};
+
+const getAttrsServer = props => {
+  return Object.keys(props).reduce((memo, key) => {
+    const attr = getAttrFnServer(key)(props[key], key);
+    return attr ? ` ${memo}${attr}` : memo;
+  }, "");
+};
+
+/**
+ * ENVIRONMENT RENDERERS
+ */
+
+const renderClient = (tag, props) => {
+  const el = document.createElement(tag);
+  eachKey(props, (val, key) => getAttrFnClient(key)(el, val, key));
   return el;
+};
+
+const renderServer = (tag, props) => {
+  return `<${tag}${getAttrsServer(props)}>${props.children.join("")}</${tag}>`;
 };
 
 /**
@@ -62,12 +97,14 @@ const attachAttrs = (el, _props) => {
  */
 
 export default (tag = "", _props, ..._children) => {
-  const props = _props || {};
-  const children = ensureArray(_children.length ? _children : props.children);
+  const props = {
+    ..._props,
+    children: ensureArray(
+      _children.length ? _children : _props && _props.children
+    ),
+  };
 
   return typeof tag === "function"
-    ? tag({ ...props, children })
-    : isBrowser()
-      ? attachAttrs(document.createElement(tag), { ...props, children })
-      : `<${tag}>${children.join("")}</${tag}>`;
+    ? tag(props)
+    : isBrowser() ? renderClient(tag, props) : renderServer(tag, props);
 };
