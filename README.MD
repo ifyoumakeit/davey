@@ -26,10 +26,10 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
 ### Client
 
 1.  `yarn`
-2.  `yarn build`
+2.  `yarn build:client`
 3.  Open [http://localhost:1234](http://localhost:1234)
 
 ### Server
 
 1. `yarn`
-2. `yarn babel-node davi.server.jsx`
+2. `yarn build:server`
