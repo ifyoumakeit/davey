@@ -1,10 +1,10 @@
 import d from "../../src/d";
 
-export default ({ children, store, active }) => {
+export default ({ children, store, active, onClick }) => {
   return (
     <button
       children={`${children} (${active ? "on" : "off"})`}
-      onClick={() => store.set({ active: !active })}
+      onClick={onClick}
       style={{
         backgroundColor: active ? "red" : "black",
         padding: "24px",

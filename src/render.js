@@ -28,7 +28,9 @@ const renderClient = ([tag, { children, ...props }]) => {
   const parent = document.createElement(tag);
 
   Array.isArray(children) && typeof children[0] !== "string"
-    ? children.forEach(([tag, { children, ...props }]) => {
+    ? children.forEach(([tag, { children = [], ...props } = {}]) => {
+        if (!tag) return;
+
         const child = renderClient([tag, { ...props, children }]);
         eachKey(props, (val, key) => getAttrFnClient(key)(child, val, key));
         parent.appendChild(child);

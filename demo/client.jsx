@@ -5,6 +5,6 @@ import App from "./components/App";
 
 const store = createStore({ active: false });
 
-store.subscribe(data =>
-  render(<App {...data} store={store} />, document.querySelector("#root"))
-);
+store.subscribe(data => {
+  render(<App {...data} store={store} />, document.querySelector("#root"));
+});
