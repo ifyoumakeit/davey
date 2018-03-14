@@ -14,19 +14,21 @@ const getAttrFnServer = key => {
   return ATTR_FNS_MAP_SERVER[key] || ATTR_FNS_MAP_SERVER.__fallback__;
 };
 
-const getAttrsServer = props => {
+const getAttrsServer = (props = {}) => {
   return Object.keys(props).reduce((memo, key) => {
     const attr = getAttrFnServer(key)(props[key], key);
     return attr ? ` ${memo}${attr}` : memo;
   }, "");
 };
 
-const renderServer = ([tag, props]) => {
-  return `<${tag}${getAttrsServer(props)}>${
-    Array.isArray(props.children) && typeof props.children[0] !== "string"
-      ? props.children.map(renderServer).join("")
-      : props.children[0]
-  }</${tag}>`;
+const renderServer = ([tag, props = {}]) => {
+  return Array.isArray(props.children)
+    ? `<${tag}${getAttrsServer(props)}>${
+        typeof props.children[0] !== "string"
+          ? props.children.map(renderServer).join("")
+          : props.children[0]
+      }</${tag}>`
+    : "";
 };
 
 const renderToStaticMarkup = ([tag, props]) => {
