@@ -1,9 +1,15 @@
 import d from "../src/d";
 import renderToStaticMarkup from "../src/renderToStaticMarkup";
-import createStore from "../src/store";
 import App from "./components/App";
+import fetch from "isomorphic-fetch";
+import { STATE } from "./constants";
 
-const store = createStore({ active: false });
-const data = store.get();
+const fetchData = async () => {
+  return await fetch("https://jsonplaceholder.typicode.com/posts")
+    .then(response => response.json())
+    .then(data => ({ data, active: true, state: STATE.POSTS }));
+};
 
-export default renderToStaticMarkup(<App {...data} />);
+export default fetchData()
+  .then(data => renderToStaticMarkup(<App {...data} />))
+  .catch(console.error);

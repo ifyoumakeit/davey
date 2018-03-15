@@ -7,7 +7,9 @@
   "author": "Dave Garwacke <dave.garwacke@warbyparker.com>",
   "license": "Apache-2.0",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
