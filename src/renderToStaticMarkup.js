@@ -1,7 +1,14 @@
+const camelCase = str => {
+  return str
+    .replace(/([a-z])([A-Z])/g, "$1-$2")
+    .replace(/\s+/g, "-")
+    .toLowerCase();
+};
+
 const ATTR_FNS_MAP_SERVER = {
   style: styles => {
     return `style="${Object.keys(styles).reduce((memo, key) => {
-      return `${memo}${key}:${styles[key]};`;
+      return `${memo}${camelCase(key)}:${styles[key]};`;
     }, "")}"`;
   },
   class: (val, key) => {

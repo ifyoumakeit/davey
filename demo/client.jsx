@@ -2,7 +2,8 @@ import d from "../src/d";
 import render from "../src/render";
 import createStore from "../src/store";
 import App from "./components/App";
-import STATES from "./constants";
+import { STATE } from "./constants";
+import fetch from "isomorphic-fetch";
 
 const store = createStore({ active: false });
 

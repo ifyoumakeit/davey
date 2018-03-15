@@ -1,7 +1,14 @@
 import d from "../../src/d";
 import Button from "./Button";
 
-export default ({ active, store, data = [], fetchData, fetchPost }) => {
+export default ({
+  active,
+  store,
+  data = [],
+  fetchData,
+  fetchPost,
+  initialData,
+}) => {
   return (
     <main
       style={{
@@ -40,6 +47,7 @@ export default ({ active, store, data = [], fetchData, fetchPost }) => {
             </article>
           ))}
       </section>
+      <script>{initialData}</script>
     </main>
   );
 };
