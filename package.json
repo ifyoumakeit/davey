@@ -20,7 +20,8 @@
     "parcel-bundler": "^1.6.2"
   },
   "scripts": {
-    "build:client": "parcel demo/client.html",
-    "build:server": "babel-node demo/server.jsx"
+    "build:client": "parcel demo/index.html",
+    "build:server": "babel-node demo/server.jsx",
+    "build": "yarn build:server & yarn build:client"
   }
 }

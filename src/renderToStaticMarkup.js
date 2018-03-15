@@ -5,15 +5,19 @@ const camelCase = str => {
     .toLowerCase();
 };
 
+const kvToAttr = (val, key) => {
+  return `${key}="${val}"`;
+};
+
 const ATTR_FNS_MAP_SERVER = {
   style: styles => {
     return `style="${Object.keys(styles).reduce((memo, key) => {
       return `${memo}${camelCase(key)}:${styles[key]};`;
     }, "")}"`;
   },
-  class: (val, key) => {
-    return `${key}="${val}"`;
-  },
+  class: kvToAttr,
+  id: kvToAttr,
+  src: kvToAttr,
   __fallback__: () => "",
 };
 
@@ -28,20 +32,30 @@ const getAttrsServer = (props = {}) => {
   }, "");
 };
 
-const renderServer = ([tag, props = {}]) => {
-  return Array.isArray(props.children)
-    ? `<${tag}${getAttrsServer(props)}>${
-        typeof props.children[0] !== "string"
-          ? props.children.map(renderServer).join("")
-          : props.children[0]
-      }</${tag}>`
-    : "";
+const getIndent = index => {
+  return `\n${[...Array.from({ length: index })].join("\t")}`;
+};
+
+const renderServer = ([tag, props = {}, prevIndex = 0]) => {
+  const nextIndex = prevIndex + 1;
+  const indent = getIndent(nextIndex);
+  const children =
+    typeof props.children[0] !== "string"
+      ? props.children.reduce((memo, child) => {
+          if (!child) return memo;
+          const [tag, props] = child;
+
+          return `${memo}${renderServer(child.concat(nextIndex))}`;
+        }, "")
+      : `${indent}\t${props.children[0]}`;
+
+  return `${indent}<${tag}${getAttrsServer(props)}>${children}${
+    children ? indent : ""
+  }</${tag}>`;
 };
 
 const renderToStaticMarkup = ([tag, props]) => {
-  const result = renderServer([tag, props]);
-  console.log(result);
-  return result;
+  return renderServer([tag, props]).trim();
 };
 
 export default renderToStaticMarkup;

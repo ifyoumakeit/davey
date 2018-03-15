@@ -1,10 +1,14 @@
 import d from "../../src/d";
 import Button from "./Button";
+import Article from "./Article";
+import { STATE } from "../constants";
 
 export default ({
   active,
+  state,
   store,
-  data = [],
+  posts = [],
+  post = {},
   fetchData,
   fetchPost,
   initialData,
@@ -19,13 +23,15 @@ export default ({
       <header>
         <h1>DAVI</h1>
         <p>Dave's Alternative View Interpretation</p>
-        <Button
-          active={active}
-          store={store}
-          onClick={() => !active && fetchData()}
-        >
-          {active ? `You're done` : `Fetch posts`}
-        </Button>
+        {state === STATE.INITIAL && (
+          <Button
+            active={active}
+            store={store}
+            onClick={() => !active && fetchData()}
+          >
+            Fetch more posts
+          </Button>
+        )}
       </header>
       <section
         style={{
@@ -33,19 +39,13 @@ export default ({
           gridGap: "12px",
         }}
       >
-        {data &&
-          data.map(datum => (
-            <article
-              style={{
-                border: "1px black solid",
-                padding: "12px 18px",
-              }}
-            >
-              <h1>{datum.title}</h1>
-              <p>{datum.body}</p>
-              <button onClick={() => fetchPost(datum.id)}>Read more</button>
-            </article>
-          ))}
+        {state === STATE.POSTS || state === STATE.INITIAL ? (
+          posts.map(post => <Article {...post} {...{ fetchPost }} />)
+        ) : state === STATE.POST ? (
+          <Article {...post} />
+        ) : (
+          false
+        )}
       </section>
       <script>{initialData}</script>
     </main>

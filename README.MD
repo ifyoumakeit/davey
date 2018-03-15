@@ -23,13 +23,10 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
 
 ## Try it out
 
-### Client
+`yarn` to install
 
-1.  `yarn`
-2.  `yarn build:client`
-3.  Open [http://localhost:1234](http://localhost:1234)
+### Scripts
 
-### Server
-
-1. `yarn`
-2. `yarn build:server`
+* `yarn build` => Isomorphic build
+* `yarn build:server` => Build index.html file
+* `yarn build:client` => Run Parcel bundler on index.html
