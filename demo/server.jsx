@@ -15,7 +15,7 @@ const getInitialData = data => `var ${INITIAL_DATA}=${JSON.stringify(data)}`;
 
 export default fetchData()
   .then(data =>
-    fs.writeFileSync(
+    fs.writeFile(
       "./demo/index.html",
       renderToStaticMarkup(
         <html>
@@ -30,12 +30,16 @@ export default fetchData()
           </head>
           <body>
             <div id="root">
-              <App {...data} initialData={getInitialData(data)} />
+              <App {...data} />
             </div>
+            <script>{getInitialData(data)}</script>
             <script src="./client.jsx" />
           </body>
         </html>
-      )
+      ),
+      err => {
+        return console.log(err ? err : "./demo/index.html built.");
+      }
     )
   )
   .catch(console.error);

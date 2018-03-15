@@ -22,6 +22,6 @@
   "scripts": {
     "build:client": "parcel demo/index.html",
     "build:server": "babel-node demo/server.jsx",
-    "build": "yarn build:server & yarn build:client"
+    "build": "yarn build:server && yarn build:client"
   }
 }

@@ -11,7 +11,6 @@ export default ({
   post = {},
   fetchData,
   fetchPost,
-  initialData,
 }) => {
   return (
     <main
@@ -47,7 +46,6 @@ export default ({
           false
         )}
       </section>
-      <script>{initialData}</script>
     </main>
   );
 };
