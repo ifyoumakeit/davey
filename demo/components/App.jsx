@@ -1,7 +1,7 @@
 import d from "../../src/d";
 import Button from "./Button";
 
-export default ({ active, store, data = [], fetchData }) => {
+export default ({ active, store, data = [], fetchData, fetchPost }) => {
   return (
     <main
       style={{
@@ -29,7 +29,6 @@ export default ({ active, store, data = [], fetchData }) => {
         {data &&
           data.map(datum => (
             <article
-              class="foo"
               style={{
                 border: "1px black solid",
                 padding: "12px 18px",
@@ -37,6 +36,7 @@ export default ({ active, store, data = [], fetchData }) => {
             >
               <h1>{datum.title}</h1>
               <p>{datum.body}</p>
+              <button onClick={() => fetchPost(datum.id)}>Read more</button>
             </article>
           ))}
       </section>

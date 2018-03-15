@@ -1,21 +1,17 @@
-/**
- * Children are coming down differently if passed as an array
- * TODO: Clean this up, it's gross.
- */
-
-const flattenArray = arr => {
-  return Array.isArray(arr[0]) && Array.isArray(arr[0][0]) ? arr[0] : arr;
+const flattenFirstChild = val => {
+  // First children can come down as arrays, strings or arrays of arrays.
+  // TODO: Clean this up.
+  return val && val[0]
+    ? Array.isArray(val) && val.length > 2 ? [...val] : [val]
+    : [];
 };
 
-const ensureArray = val => {
-  return Array.isArray(val) ? val : [val];
-};
-
-export default (tag = "", _props, ...children) => {
+export default (tag = "", _props = {}, first, ...rest) => {
   const props = {
     ..._props,
-    children: flattenArray(
-      ensureArray(children.length ? children : _props && _props.children)
+    children: flattenFirstChild(first).concat(
+      rest,
+      _props && _props.children ? _props.children : []
     ),
   };
 

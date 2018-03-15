@@ -6,11 +6,11 @@ export default ({ children, store, active, onClick }) => {
       children={children}
       onClick={onClick}
       style={{
-        backgroundColor: active ? "red" : "black",
+        backgroundColor: active ? "blue" : "black",
         padding: "24px",
         fontSize: "20px",
         color: "#fff",
-        marginBottom: "24px"
+        marginBottom: "24px",
       }}
     />
   );
