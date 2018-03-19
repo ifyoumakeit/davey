@@ -25,8 +25,14 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
 
 `yarn` to install
 
-### Scripts
+### Examples
 
-* `yarn build` => Isomorphic build
-* `yarn build:server` => Build index.html file
-* `yarn build:client` => Run Parcel bundler on index.html
+#### Hello World
+
+* `yarn build:hello`
+* `yarn dist:hello`
+
+#### Isomorphic (Server Side Rendering)
+
+* `yarn build:isomorphic`
+* `yarn dist:isomorphic`

@@ -54,8 +54,8 @@ const renderServer = ([tag, props = {}, prevIndex = 0]) => {
   }</${tag}>`;
 };
 
-const renderToStaticMarkup = ([tag, props]) => {
-  return renderServer([tag, props]).trim();
+const renderToStaticMarkup = elements => {
+  return renderServer(elements).trim();
 };
 
 export default renderToStaticMarkup;

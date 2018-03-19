@@ -41,7 +41,7 @@ const renderClient = ([tag, { children, ...props }]) => {
   return parent;
 };
 
-export default ([tag, props], el) => {
+export default (elements, el) => {
   el.innerHTML = "";
-  el.appendChild(renderClient([tag, props]));
+  el.appendChild(renderClient(elements));
 };
