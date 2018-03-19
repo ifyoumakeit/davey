@@ -1,9 +1,11 @@
-import d from "../src/d";
-import renderToStaticMarkup from "../src/renderToStaticMarkup";
+import d from "../../src/d";
+import renderToStaticMarkup from "../../src/renderToStaticMarkup";
 import App from "./components/App";
 import fetch from "isomorphic-fetch";
 import { STATE, INITIAL_DATA } from "./constants";
 import fs from "fs";
+
+const FILENAME = "./examples/isomorphic/index.html";
 
 const fetchData = async () => {
   return await fetch("https://jsonplaceholder.typicode.com/posts")
@@ -16,7 +18,7 @@ const getInitialData = data => `var ${INITIAL_DATA}=${JSON.stringify(data)}`;
 export default fetchData()
   .then(data =>
     fs.writeFile(
-      "./demo/index.html",
+      FILENAME,
       renderToStaticMarkup(
         <html>
           <head>
@@ -38,7 +40,9 @@ export default fetchData()
         </html>
       ),
       err => {
-        return console.log(err ? err : "./demo/index.html built.");
+        return console.log(
+          err ? err : `${FILENAME} built.`
+        );
       }
     )
   )

@@ -1,6 +1,6 @@
-import d from "../src/d";
-import render from "../src/render";
-import createStore from "../src/store";
+import d from "../../src/d";
+import render from "../../src/render";
+import createStore from "../../src/store";
 import App from "./components/App";
 import { STATE, INITIAL_DATA } from "./constants";
 import fetch from "isomorphic-fetch";

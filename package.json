@@ -21,11 +21,15 @@
     "parcel-bundler": "^1.6.2"
   },
   "scripts": {
-    "build:client": "parcel demo/index.html",
-    "build:server": "babel-node demo/server.jsx",
-    "build": "yarn build:server && yarn build:client",
-    "dist:client": "parcel build demo/index.html",
-    "dist:server": "babel-node demo/server.jsx",
-    "dist": "yarn dist:server && yarn dist:client"
+    "build:hello": "parcel examples/hello/index.html",
+    "dist:hello": "parcel build examples/hello/index.html",
+    "build:isomorphic:client": "parcel examples/isomorphic/index.html",
+    "build:isomorphic:server": "babel-node examples/isomorphic/server.jsx",
+    "build:isomorphic":
+      "yarn build:isomorphic:server && yarn build:isomorphic:client",
+    "dist:isomorphic:client": "parcel build examples/isomorphic/index.html",
+    "dist:isomorphic:server": "babel-node examples/isomorphic/server.jsx",
+    "dist:isomorphic":
+      "yarn dist:isomorphic:server && yarn dist:isomorphic:client"
   }
 }

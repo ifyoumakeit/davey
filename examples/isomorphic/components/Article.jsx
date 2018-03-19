@@ -1,4 +1,4 @@
-import d from "../../src/d";
+import d from "../../../src/d";
 
 export default ({ title, body, id, fetchPost }) => {
   return (
