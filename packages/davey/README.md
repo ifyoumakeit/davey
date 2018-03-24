@@ -23,4 +23,4 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
 
 ## Try it out
 
-https://codesandbox.io/s/4wjq8j000x
+`yarn add davey`
