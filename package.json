@@ -12,7 +12,8 @@
   ],
   "dependencies": {
     "commitizen": "^2.9.6",
-    "isomorphic-fetch": "^2.2.1"
+    "isomorphic-fetch": "^2.2.1",
+    "lerna": "^2.9.0"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^2.1.0",
@@ -23,6 +24,7 @@
   },
   "scripts": {
     "commit": "git add . && git cz",
+    "pub": "yarn build && yarn lerna publish",
     "build": "yarn build:davi & yarn build:davi-dom & yarn build:davi-server & yarn build:davi-store",
     "build:davi": "microbundle --cwd packages/davi",
     "build:davi-dom": "microbundle --cwd packages/davi-dom",
