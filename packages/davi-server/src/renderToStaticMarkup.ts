@@ -1,3 +1,8 @@
+export interface Props {
+  children?: String[]
+  [key: string]: any
+}
+
 const camelCase = str => {
   return str
     .replace(/([a-z])([A-Z])/g, "$1-$2")
@@ -36,7 +41,7 @@ const getIndent = index => {
   return `\n${[...Array.from({ length: index })].join("\t")}`;
 };
 
-const renderServer = ([tag, props = {}, prevIndex = 0]) => {
+const renderServer = ([tag, props, prevIndex = 0]) => {
   const nextIndex = prevIndex + 1;
   const indent = getIndent(nextIndex);
   const children =

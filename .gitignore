@@ -1,6 +1,9 @@
 dist
+lib
 node_modules
 .cache
-yarn-error.log
+*.log
+.rpt2_cache
+
 
 demo/complex/index.html

@@ -17,5 +17,13 @@
     "ts-node": "^5.0.1",
     "typescript": "^2.7.2"
   },
-  "scripts": {}
+  "scripts": {
+    "build":
+      "yarn build:davi & yarn build:davi-dom & yarn build:davi-server & yarn build:davi-store",
+    "build:davi": "microbundle --cwd packages/davi",
+    "build:davi-dom": "microbundle --cwd packages/davi-dom",
+    "build:davi-server": "microbundle --cwd packages/davi-server",
+    "build:davi-store": "microbundle --cwd packages/davi-store",
+    "build:davi-examples": "microbundle --cwd packages/davi-examples"
+  }
 }

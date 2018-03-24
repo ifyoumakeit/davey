@@ -1,3 +1,9 @@
+export interface Props {
+  children: String | String[];
+}
+
+export type Tag = Function | String;
+
 const flattenFirstChild = val => {
   // First children can come down as arrays, strings or arrays of arrays.
   // TODO: Clean this up.
@@ -6,7 +12,7 @@ const flattenFirstChild = val => {
     : [];
 };
 
-export default (tag = "", _props = {}, first, ...rest) => {
+export default (tag: Tag, _props: Props, first, ...rest) => {
   const props = {
     ..._props,
     children: flattenFirstChild(first).concat(
