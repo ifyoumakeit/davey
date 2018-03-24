@@ -1,11 +1,12 @@
-import d from "../../src/d";
-import renderToStaticMarkup from "../../src/renderToStaticMarkup";
-import App from "./components/App";
-import fetch from "isomorphic-fetch";
-import { STATE, INITIAL_DATA } from "./constants";
-import fs from "fs";
+import { davi } from "davi";
+import { renderToStaticMarkup } from "davi-server";
 
-const FILENAME = "./examples/isomorphic/index.html";
+import App from "./components/App";
+import * as fetch from "isomorphic-fetch";
+import { STATE, INITIAL_DATA } from "./constants";
+import * as fs from "fs";
+
+const FILENAME = "./isomorphic/index.html";
 
 const fetchData = async () => {
   return await fetch("https://jsonplaceholder.typicode.com/posts")
@@ -35,14 +36,12 @@ export default fetchData()
               <App {...data} />
             </div>
             <script>{getInitialData(data)}</script>
-            <script src="./client.jsx" />
+            <script src="./client.tsx" />
           </body>
         </html>
       ),
       err => {
-        return console.log(
-          err ? err : `${FILENAME} built.`
-        );
+        return console.log(err ? err : `${FILENAME} built.`);
       }
     )
   )

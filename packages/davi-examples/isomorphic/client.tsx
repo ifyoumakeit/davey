@@ -1,9 +1,9 @@
-import d from "../../src/d";
-import render from "../../src/render";
-import createStore from "../../src/store";
+import { davi } from "davi";
+import { render } from "davi-dom";
+import { createStore } from "davi-store";
 import App from "./components/App";
 import { STATE, INITIAL_DATA } from "./constants";
-import fetch from "isomorphic-fetch";
+import * as fetch from "isomorphic-fetch";
 
 const store = createStore({
   active: false,

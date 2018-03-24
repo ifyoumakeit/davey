@@ -1,0 +1,34 @@
+{
+  "name": "davi-examples",
+  "version": "0.0.1",
+  "description": "DAVI Examples",
+  "main": "./src/index.js",
+  "repository": "git@github.com:ifyoumakeit/davi.git",
+  "author": "Dave Garwacke <dave.garwacke@warbyparker.com>",
+  "license": "Apache-2.0",
+  "private": true,
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "davi": "0.0.1",
+    "davi-dom": "0.0.1",
+    "davi-server": "0.0.1"
+  },
+  "devDependencies": {
+    "microbundle": "^0.4.4",
+    "parcel-bundler": "^1.6.2",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.7.2"
+  },
+  "scripts": {
+    "build:hello": "parcel hello/index.html",
+    "dist:hello": "parcel build hello/index.html",
+    "build:isomorphic:client": "parcel isomorphic/index.html",
+    "build:isomorphic:server": "ts-node isomorphic/server.tsx",
+    "build:isomorphic":
+      "yarn build:isomorphic:server && yarn build:isomorphic:client",
+    "dist:isomorphic:client": "parcel build isomorphic/index.html",
+    "dist:isomorphic:server": "ts-node isomorphic/server.tsx",
+    "dist:isomorphic":
+      "yarn dist:isomorphic:server && yarn dist:isomorphic:client"
+  }
+}

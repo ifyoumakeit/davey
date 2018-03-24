@@ -1,35 +1,38 @@
 {
   "name": "davi",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Dave's Alternate View Interpretation",
   "main": "./src/index.js",
   "repository": "git@github.com:ifyoumakeit/davi.git",
   "author": "Dave Garwacke <dave.garwacke@warbyparker.com>",
   "license": "Apache-2.0",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "dependencies": {
+    "commitizen": "^2.9.6",
     "isomorphic-fetch": "^2.2.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.6.1",
+    "cz-conventional-changelog": "^2.1.0",
     "microbundle": "^0.4.4",
-    "parcel-bundler": "^1.6.2"
+    "parcel-bundler": "^1.6.2",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.7.2"
   },
   "scripts": {
-    "build:hello": "parcel examples/hello/index.html",
-    "dist:hello": "parcel build examples/hello/index.html",
-    "build:isomorphic:client": "parcel examples/isomorphic/index.html",
-    "build:isomorphic:server": "babel-node examples/isomorphic/server.jsx",
-    "build:isomorphic":
-      "yarn build:isomorphic:server && yarn build:isomorphic:client",
-    "dist:isomorphic:client": "parcel build examples/isomorphic/index.html",
-    "dist:isomorphic:server": "babel-node examples/isomorphic/server.jsx",
-    "dist:isomorphic":
-      "yarn dist:isomorphic:server && yarn dist:isomorphic:client"
+    "commit": "git add . && git cz",
+    "build": "yarn build:davi & yarn build:davi-dom & yarn build:davi-server & yarn build:davi-store",
+    "build:davi": "microbundle --cwd packages/davi",
+    "build:davi-dom": "microbundle --cwd packages/davi-dom",
+    "build:davi-server": "microbundle --cwd packages/davi-server",
+    "build:davi-store": "microbundle --cwd packages/davi-store",
+    "build:davi-examples": "microbundle --cwd packages/davi-examples"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

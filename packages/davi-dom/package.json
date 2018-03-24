@@ -1,0 +1,17 @@
+{
+  "name": "davi-dom",
+  "version": "0.0.1",
+  "description": "Dave's Alternate View Interpretation DOM helpers",
+  "main": "./lib/index.js",
+  "source": "./index.ts",
+  "repository": "git@github.com:ifyoumakeit/davi.git",
+  "author": "Dave Garwacke <dave.garwacke@warbyparker.com>",
+  "license": "Apache-2.0",  
+  "devDependencies": {
+    "microbundle": "^0.4.4"
+  },
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  }
+}

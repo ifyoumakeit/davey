@@ -1,4 +1,4 @@
-import d from "../../../src/d";
+import { davi } from "davi";
 import Button from "./Button";
 import Article from "./Article";
 import { STATE } from "../constants";
