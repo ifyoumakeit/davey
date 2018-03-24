@@ -33,3 +33,9 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
 ## Try it out
 
 https://codesandbox.io/s/4wjq8j000x
+
+## Examples
+
+1.  `yarn` to install all dependencies and link.
+2.  `cd examples/hello && yarn build`
+3.  `cd examples/isomorphic && yarn build`
