@@ -1,4 +1,4 @@
-import { davi } from "davi";
+import { davey } from "davey";
 
 export default ({ children, store, active, onClick }) => {
   return (

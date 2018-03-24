@@ -1,4 +1,4 @@
-import { davi } from "davi";
+import { davey } from "davey";
 import Button from "./Button";
 import Article from "./Article";
 import { STATE } from "../constants";
@@ -20,7 +20,7 @@ export default ({
       }}
     >
       <header>
-        <h1>DAVI</h1>
+        <h1>davey</h1>
         <p>Dave's Alternative View Interpretation</p>
         {state === STATE.INITIAL && (
           <Button
