@@ -1,17 +1,17 @@
 {
-  "name": "davi-examples",
+  "name": "davey-examples",
   "version": "0.0.1",
-  "description": "DAVI Examples",
+  "description": "davey Examples",
   "main": "./src/index.js",
-  "repository": "git@github.com:ifyoumakeit/davi.git",
+  "repository": "git@github.com:ifyoumakeit/davey.git",
   "author": "Dave Garwacke <dave.garwacke@warbyparker.com>",
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
-    "davi": "0.0.1",
-    "davi-dom": "0.0.1",
-    "davi-server": "0.0.1"
+    "davey": "0.0.1",
+    "davey-dom": "0.0.1",
+    "davey-server": "0.0.1"
   },
   "devDependencies": {
     "microbundle": "^0.4.4",

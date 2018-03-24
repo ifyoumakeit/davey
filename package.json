@@ -1,9 +1,9 @@
 {
-  "name": "davi",
+  "name": "davey",
   "version": "0.1.0",
   "description": "Dave's Alternate View Interpretation",
   "main": "./src/index.js",
-  "repository": "git@github.com:ifyoumakeit/davi.git",
+  "repository": "git@github.com:ifyoumakeit/davey.git",
   "author": "Dave Garwacke <dave.garwacke@warbyparker.com>",
   "license": "Apache-2.0",
   "private": true,
@@ -25,12 +25,12 @@
   "scripts": {
     "commit": "git add . && git cz",
     "pub": "yarn build && yarn lerna publish",
-    "build": "yarn build:davi & yarn build:davi-dom & yarn build:davi-server & yarn build:davi-store",
-    "build:davi": "microbundle --cwd packages/davi",
-    "build:davi-dom": "microbundle --cwd packages/davi-dom",
-    "build:davi-server": "microbundle --cwd packages/davi-server",
-    "build:davi-store": "microbundle --cwd packages/davi-store",
-    "build:davi-examples": "microbundle --cwd packages/davi-examples"
+    "build": "yarn build:davey & yarn build:davey-dom & yarn build:davey-server & yarn build:davey-store",
+    "build:davey": "microbundle --cwd packages/davey",
+    "build:davey-dom": "microbundle --cwd packages/davey-dom",
+    "build:davey-server": "microbundle --cwd packages/davey-server",
+    "build:davey-store": "microbundle --cwd packages/davey-store",
+    "build:davey-examples": "microbundle --cwd packages/davey-examples"
   },
   "config": {
     "commitizen": {

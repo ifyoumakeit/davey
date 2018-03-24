@@ -1,6 +1,6 @@
-import { davi } from "davi";
-import { render } from "davi-dom";
-import { createStore } from "davi-store";
+import { davey } from "davey";
+import { render } from "davey-dom";
+import { createStore } from "davey-store";
 import App from "./components/App";
 import { STATE, INITIAL_DATA } from "./constants";
 import * as fetch from "isomorphic-fetch";

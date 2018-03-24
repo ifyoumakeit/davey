@@ -1,5 +1,5 @@
-import { davi } from "davi";
-import { renderToStaticMarkup } from "davi-server";
+import { davey } from "davey";
+import { renderToStaticMarkup } from "davey-server";
 
 import App from "./components/App";
 import * as fetch from "isomorphic-fetch";
@@ -23,7 +23,7 @@ export default fetchData()
       renderToStaticMarkup(
         <html>
           <head>
-            <title>Davi</title>
+            <title>davey</title>
             <meta charset="UTF-8" />
             <meta
               name="viewport"

@@ -5,6 +5,6 @@
     "module": "commonjs",
     "sourceMap": true,
     "jsx": "react",
-    "jsxFactory": "davi"
+    "jsxFactory": "davey"
   }
 }

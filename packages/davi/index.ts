@@ -12,7 +12,7 @@ const flattenFirstChild = val => {
     : [];
 };
 
-export const davi = (tag: Tag, _props: Props, first, ...rest) => {
+export const davey = (tag: Tag, _props: Props, first, ...rest) => {
   const props = {
     ..._props,
     children: flattenFirstChild(first).concat(
