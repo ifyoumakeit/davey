@@ -8,15 +8,12 @@
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
-    "isomorphic-fetch": "^2.2.1"
+    "isomorphic-fetch": "^2.2.1",
+    "davi": "0.0.1",
+    "davi-dom": "0.0.1",
+    "davi-server": "0.0.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.6.1",
     "microbundle": "^0.4.4",
     "parcel-bundler": "^1.6.2",
     "ts-node": "^5.0.1",
