@@ -1,6 +1,6 @@
 {
   "name": "davey-examples",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "davey Examples",
   "main": "./src/index.js",
   "repository": "git@github.com:ifyoumakeit/davey.git",
@@ -8,10 +8,10 @@
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
-    "isomorphic-fetch": "^2.2.1",
-    "davey": "0.0.1",
-    "davey-dom": "0.0.1",
-    "davey-server": "0.0.1"
+    "davey": "^0.1.1",
+    "davey-dom": "^0.1.1",
+    "davey-server": "^0.1.1",
+    "isomorphic-fetch": "^2.2.1"
   },
   "devDependencies": {
     "microbundle": "^0.4.4",
@@ -24,11 +24,9 @@
     "dist:hello": "parcel build hello/index.html",
     "build:isomorphic:client": "parcel isomorphic/index.html",
     "build:isomorphic:server": "ts-node isomorphic/server.tsx",
-    "build:isomorphic":
-      "yarn build:isomorphic:server && yarn build:isomorphic:client",
+    "build:isomorphic": "yarn build:isomorphic:server && yarn build:isomorphic:client",
     "dist:isomorphic:client": "parcel build isomorphic/index.html",
     "dist:isomorphic:server": "ts-node isomorphic/server.tsx",
-    "dist:isomorphic":
-      "yarn dist:isomorphic:server && yarn dist:isomorphic:client"
+    "dist:isomorphic": "yarn dist:isomorphic:server && yarn dist:isomorphic:client"
   }
 }
