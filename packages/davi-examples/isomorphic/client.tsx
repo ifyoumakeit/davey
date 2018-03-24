@@ -1,4 +1,4 @@
-import davi from "davi";
+import * as davi from "davi";
 import { render } from "davi-dom";
 import { createStore } from "davi-store";
 import App from "./components/App";

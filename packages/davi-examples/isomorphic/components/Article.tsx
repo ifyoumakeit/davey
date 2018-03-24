@@ -1,4 +1,4 @@
-import davi from "davi";
+import * as davi from "davi";
 
 export default ({ title, body, id, fetchPost }) => {
   return (
