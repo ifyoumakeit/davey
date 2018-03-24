@@ -1,0 +1,26 @@
+{
+  "name": "davey-example-hello-world",
+  "version": "0.1.1",
+  "description": "davey hello world",
+  "main": "./src/index.js",
+  "repository": "git@github.com:ifyoumakeit/davey.git",
+  "author": "Dave Garwacke <dave.garwacke@warbyparker.com>",
+  "license": "Apache-2.0",
+  "private": true,
+  "dependencies": {
+    "davey": "^0.1.1",
+    "davey-dom": "^0.1.1",
+    "davey-server": "^0.1.1",
+    "isomorphic-fetch": "^2.2.1"
+  },
+  "devDependencies": {
+    "microbundle": "^0.4.4",
+    "parcel-bundler": "^1.6.2",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.7.2"
+  },
+  "scripts": {
+    "build": "parcel index.html",
+    "dist": "parcel build index.html"
+  }
+}

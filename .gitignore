@@ -4,6 +4,4 @@ node_modules
 .cache
 *.log
 .rpt2_cache
-
-
-demo/complex/index.html
+.DS_Store

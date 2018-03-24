@@ -6,6 +6,15 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
 
 (AKA Recreating the wheel)
 
+## Packages
+
+* davey
+* davey-dom
+* davey-server
+* davey-store
+
+## Features
+
 * [x] JX2JSX
 * [x] Stylin' inline
 * [x] Handle some clicks and blurs
