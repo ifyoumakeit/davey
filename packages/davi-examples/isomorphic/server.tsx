@@ -1,4 +1,4 @@
-import * as davi from "davi";
+import { davi } from "davi";
 import { renderToStaticMarkup } from "davi-server";
 
 import App from "./components/App";

@@ -1,4 +1,4 @@
-import * as davi from "davi";
+import { davi } from "davi";
 import Button from "./Button";
 import Article from "./Article";
 import { STATE } from "../constants";
