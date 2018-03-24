@@ -1,4 +1,4 @@
-import d from "../../../src/d";
+import davi from "davi";
 
 export default ({ title, body, id, fetchPost }) => {
   return (
