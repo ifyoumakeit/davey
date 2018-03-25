@@ -1,6 +1,6 @@
-import { davey } from "../lib";
+import { davey } from "../index";
 
-describe("Basic single elemnt", () => {
+describe("Basic single element", () => {
   const Component = <h1>hello</h1>;
   test("match snapshot", () => {
     expect(Component).toMatchSnapshot();
