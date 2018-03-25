@@ -1,6 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Basic single elemnt match snapshot 1`] = `
+exports[`2-level deep nested element match snapshot 1`] = `
+Array [
+  "main",
+  Object {
+    "children": Array [
+      Array [
+        "header",
+        Object {
+          "children": Array [
+            Array [
+              "h1",
+              Object {
+                "children": Array [
+                  "hello",
+                ],
+              },
+            ],
+            Array [
+              "h2",
+              Object {
+                "children": Array [
+                  "world",
+                ],
+              },
+            ],
+          ],
+        },
+      ],
+    ],
+  },
+]
+`;
+
+exports[`Basic single element match snapshot 1`] = `
 Array [
   "h1",
   Object {
