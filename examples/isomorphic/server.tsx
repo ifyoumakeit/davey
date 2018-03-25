@@ -6,7 +6,7 @@ import * as fetch from "isomorphic-fetch";
 import { STATE, INITIAL_DATA } from "./constants";
 import * as fs from "fs";
 
-const FILENAME = "./isomorphic/index.html";
+const FILENAME = "./index.html";
 
 const fetchData = async () => {
   return await fetch("https://jsonplaceholder.typicode.com/posts")

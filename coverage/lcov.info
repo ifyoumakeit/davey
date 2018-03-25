@@ -23,8 +23,6 @@ BRDA:1,0,0,1
 BRDA:1,0,1,0
 BRDA:1,1,0,0
 BRDA:1,1,1,0
-BRDA:1,2,0,1
-BRDA:1,2,1,0
-BRF:6
-BRH:2
+BRF:4
+BRH:1
 end_of_record
