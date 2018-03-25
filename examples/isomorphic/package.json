@@ -1,15 +1,15 @@
 {
   "name": "davey-example-isomorphic",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "davey isomorphic example",
   "repository": "git@github.com:ifyoumakeit/davey.git",
   "author": "Dave Garwacke <dave.garwacke@warbyparker.com>",
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
-    "davey": "^0.2.0",
-    "davey-dom": "^0.2.0",
-    "davey-server": "^0.2.0",
+    "davey": "^0.2.1",
+    "davey-dom": "^0.2.1",
+    "davey-server": "^0.2.1",
     "isomorphic-fetch": "^2.2.1"
   },
   "devDependencies": {
