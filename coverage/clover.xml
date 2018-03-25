@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1521978796723" clover="3.2.0">
-  <project timestamp="1521978796723" name="All files">
-    <metrics statements="5" coveredstatements="5" conditionals="14" coveredconditionals="9" methods="2" coveredmethods="2" elements="21" coveredelements="16" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1">
-      <file name="index.ts" path="/Users/davidgarwacke/src/davey/packages/davey/index.ts">
-        <metrics statements="5" coveredstatements="5" conditionals="14" coveredconditionals="9" methods="2" coveredmethods="2"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="10" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="15" count="5" type="stmt"/>
-        <line num="16" count="5" type="stmt"/>
-        <line num="24" count="5" type="cond" truecount="1" falsecount="1"/>
-      </file>
+<coverage generated="1521982231382" clover="3.2.0">
+  <project timestamp="1521982231382" name="All files">
+    <metrics statements="2" coveredstatements="2" conditionals="41" coveredconditionals="19" methods="15" coveredmethods="5" elements="58" coveredelements="26" complexity="0" loc="2" ncloc="2" packages="2" files="2" classes="2">
+      <package name="davey-dom.lib">
+        <metrics statements="1" coveredstatements="1" conditionals="23" coveredconditionals="9" methods="13" coveredmethods="4"/>
+        <file name="index.js" path="/Users/davidgarwacke/src/davey/packages/davey-dom/lib/index.js">
+          <metrics statements="1" coveredstatements="1" conditionals="23" coveredconditionals="9" methods="13" coveredmethods="4"/>
+          <line num="1" count="1" type="cond" truecount="9" falsecount="14"/>
+        </file>
+      </package>
+      <package name="davey.lib">
+        <metrics statements="1" coveredstatements="1" conditionals="18" coveredconditionals="10" methods="2" coveredmethods="1"/>
+        <file name="index.js" path="/Users/davidgarwacke/src/davey/packages/davey/lib/index.js">
+          <metrics statements="1" coveredstatements="1" conditionals="18" coveredconditionals="10" methods="2" coveredmethods="1"/>
+          <line num="1" count="5" type="cond" truecount="10" falsecount="8"/>
+        </file>
+      </package>
     </metrics>
   </project>
 </coverage>
