@@ -1,5 +1,4 @@
 {
-  "name": "davey",
   "version": "0.1.0",
   "description": "Dave's Alternate View Interpretation",
   "main": "./src/index.js",
@@ -12,15 +11,16 @@
     "isomorphic-fetch": "^2.2.1"
   },
   "devDependencies": {
+    "@types/jest": "^22.2.2",
+    "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
-    "microbundle": "^0.4.4",
-    "parcel-bundler": "^1.6.2",
-    "ts-node": "^5.0.1",
-    "typescript": "^2.7.2",
     "jest": "^22.4.3",
     "lerna": "^2.9.0",
+    "microbundle": "^0.4.4",
+    "parcel-bundler": "^1.6.2",
     "ts-jest": "^22.4.2",
-    "commitizen": "^2.9.6"
+    "ts-node": "^5.0.1",
+    "typescript": "^2.7.2"
   },
   "scripts": {
     "commit": "git add . && git cz",
@@ -31,11 +31,22 @@
     "build:davey-dom": "microbundle --cwd packages/davey-dom",
     "build:davey-server": "microbundle --cwd packages/davey-server",
     "build:davey-store": "microbundle --cwd packages/davey-store",
-    "build:davey-examples": "microbundle --cwd packages/davey-examples"
+    "test":
+      "yarn test:davey && yarn test:davey-dom && yarn test:davey-server && yarn test:davey-store",
+    "test:davey": "jest 'packages/davey/.*'",
+    "test:davey-dom": "test 'packages/davey-dom/.*'",
+    "test:davey-server": "test 'packages/davey-server/.*'",
+    "test:davey-store": "test 'packages/davey-store/.*'"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "transform": { "^.+\\.tsx?$": "ts-jest" },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
   }
 }

@@ -6,5 +6,6 @@
     "sourceMap": true,
     "jsx": "react",
     "jsxFactory": "davey"
-  }
+  },
+  "exclude": ["node_modules"]
 }
