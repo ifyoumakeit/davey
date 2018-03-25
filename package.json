@@ -65,10 +65,10 @@
       "node"
     ],
     "moduleNameMapper": {
-      "davey$": "<rootDir>/packages/davey/lib",
-      "davey-dom$": "<rootDir>/packages/davey-dom/lib",
-      "davey-server$": "<rootDir>/packages/davey-server/lib",
-      "davey-store$": "<rootDir>/packages/davey-store/lib"
+      "davey$": "<rootDir>/packages/davey",
+      "davey-dom$": "<rootDir>/packages/davey-dom",
+      "davey-server$": "<rootDir>/packages/davey-server",
+      "davey-store$": "<rootDir>/packages/davey-store"
     },
     "testPathIgnorePatterns": [
       "/packages/davey/lib/",

@@ -43,3 +43,14 @@ Array [
   },
 ]
 `;
+
+exports[`Basic single element match snapshot 2`] = `
+Array [
+  "h1",
+  Object {
+    "children": Array [
+      "hello",
+    ],
+  },
+]
+`;
