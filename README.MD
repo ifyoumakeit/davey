@@ -6,6 +6,8 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
 
 (AKA Recreating the wheel)
 
+[![CircleCI](https://circleci.com/gh/ifyoumakeit/davey.svg?style=svg)](https://circleci.com/gh/ifyoumakeit/davey)
+
 ## Packages
 
 * davey
