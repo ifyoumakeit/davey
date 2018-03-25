@@ -4,7 +4,7 @@
   "description": "davey hello world",
   "repository": "git@github.com:ifyoumakeit/davey.git",
   "author": "Dave Garwacke <dave.garwacke@warbyparker.com>",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "davey": "^0.2.1",
