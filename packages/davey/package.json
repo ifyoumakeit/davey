@@ -1,6 +1,6 @@
 {
   "name": "davey",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Dave's Alternate View Interpretation",
   "main": "./lib/index.js",
   "source": "./index.ts",
