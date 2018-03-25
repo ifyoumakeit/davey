@@ -18,7 +18,6 @@
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
     "jest": "^22.4.3",
-    "jsdom": "^11.6.2",
     "lerna": "^2.9.0",
     "microbundle": "^0.4.4",
     "parcel-bundler": "^1.6.2",
@@ -42,8 +41,8 @@
     "test": "yarn test:davey && yarn test:davey-dom && yarn test:davey-server && yarn test:davey-store",
     "test:davey": "jest 'packages/davey/.*'",
     "test:davey-dom": "jest 'packages/davey-dom/.*'",
-    "test:davey-server": "test 'packages/davey-server/.*'",
-    "test:davey-store": "test 'packages/davey-store/.*'"
+    "test:davey-server": "jest 'packages/davey-server/.*'",
+    "test:davey-store": "jest 'packages/davey-store/.*'"
   },
   "config": {
     "commitizen": {

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`2-level deep nested element match snapshot 1`] = `
+"<main>
+	<header>
+		<h1>
+			hello
+		</h1>
+		<h2>
+			world
+		</h2>
+	</header>
+</main>"
+`;
+
+exports[`Basic single element match snapshot 1`] = `
+"<h1>
+	hello
+</h1>"
+`;

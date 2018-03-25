@@ -1,4 +1,8 @@
-export default (store = {}) => {
+export interface Data {
+  [key: string]: any;
+}
+
+export default (store: Data) => {
   const listeners = [];
 
   const get = () => store;
