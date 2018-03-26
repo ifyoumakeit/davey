@@ -35,8 +35,7 @@
     "build:davey-dom": "microbundle --cwd packages/davey-dom",
     "build:davey-server": "microbundle --cwd packages/davey-server",
     "build:davey-store": "microbundle --cwd packages/davey-store",
-    "test":
-      "yarn test:davey && yarn test:davey-dom && yarn test:davey-server && yarn test:davey-store",
+    "test": "jest",
     "test:davey": "jest 'packages/davey/.*'",
     "test:davey-dom": "jest 'packages/davey-dom/.*'",
     "test:davey-server": "jest 'packages/davey-server/.*'",
