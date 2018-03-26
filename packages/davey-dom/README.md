@@ -2,6 +2,10 @@
 
 **davey's dom methods**
 
+[![CircleCI](https://circleci.com/gh/ifyoumakeit/davey.svg?style=shield)](https://circleci.com/gh/ifyoumakeit/davey)
+[![codecov](https://codecov.io/gh/ifyoumakeit/davey/branch/master/graph/badge.svg)](https://codecov.io/gh/ifyoumakeit/davey)
+![npm (scoped)](https://img.shields.io/npm/v/davey-dom.svg)
+
 ## Methods
 
 ### render
