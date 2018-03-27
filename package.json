@@ -21,8 +21,7 @@
   },
   "scripts": {
     "commit": "git add . && git cz",
-    "prepublish": "yarn build && yarn test",
-    "publish": "yarn lerna publish",
+    "publish": "yarn build && yarn test && yarn lerna publish",
     "clean":
       "yarn clean:davey && yarn clean:davey-dom && yarn clean:davey-server && yarn clean:davey-store",
     "clean:davey": "rm -rf packages/davey/lib",
