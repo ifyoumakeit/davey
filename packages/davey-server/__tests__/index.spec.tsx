@@ -21,3 +21,17 @@ describe("2-level deep nested element", () => {
     ).toMatchSnapshot();
   });
 });
+
+describe("Resolves text nodes ", () => {
+  test("match snapshot", () => {
+    expect(
+      renderToStaticMarkup(
+        <h1>
+          hello <span>my</span>
+          <h2>world</h2>
+          friend
+        </h1>
+      )
+    ).toMatchSnapshot();
+  });
+});

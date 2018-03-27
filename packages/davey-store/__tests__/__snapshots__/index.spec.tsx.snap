@@ -3,6 +3,7 @@
 exports[`getStore match snapshot 1`] = `
 Object {
   "get": [Function],
+  "listeners": Array [],
   "set": [Function],
   "subscribe": [Function],
 }

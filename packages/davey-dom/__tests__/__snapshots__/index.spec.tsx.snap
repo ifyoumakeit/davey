@@ -22,3 +22,18 @@ exports[`Basic single element match snapshot 1`] = `
   </h1>
 </body>
 `;
+
+exports[`Resolves text nodes match snapshot 1`] = `
+<body>
+  <h1>
+    hello 
+    <span>
+      my
+    </span>
+    <h2>
+      world
+    </h2>
+    friend
+  </h1>
+</body>
+`;

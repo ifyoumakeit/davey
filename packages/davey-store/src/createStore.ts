@@ -3,7 +3,7 @@ export interface Data {
 }
 
 export default (store: Data) => {
-  const listeners = [];
+  let listeners = [];
 
   const get = () => store;
 
@@ -24,11 +24,12 @@ export default (store: Data) => {
     return () => {
       // Return handler removal function.
       const index = listeners.indexOf(handler);
-      return [...listeners.slice(0, index), ...listeners.slice(index + 1)];
+      listeners = [...listeners.slice(0, index), ...listeners.slice(index + 1)];
     };
   };
 
   return {
+    listeners,
     subscribe,
     set,
     get,

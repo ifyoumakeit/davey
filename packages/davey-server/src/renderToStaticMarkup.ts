@@ -1,7 +1,9 @@
 export interface Props {
-  children?: String[]
-  [key: string]: any
+  children?: String[];
+  [key: string]: any;
 }
+
+export type Tuple = [String, Props];
 
 const camelCase = str => {
   return str
@@ -41,18 +43,19 @@ const getIndent = index => {
   return `\n${[...Array.from({ length: index })].join("\t")}`;
 };
 
-const renderServer = ([tag, props, prevIndex = 0]) => {
+const renderServer = (elements, prevIndex = 0) => {
+  const [tag, props] = elements;
   const nextIndex = prevIndex + 1;
   const indent = getIndent(nextIndex);
-  const children =
-    typeof props.children[0] !== "string"
-      ? props.children.reduce((memo, child) => {
-          if (!child) return memo;
-          const [tag, props] = child;
-
-          return `${memo}${renderServer(child.concat(nextIndex))}`;
-        }, "")
-      : `${indent}\t${props.children[0]}`;
+  const children = Array.isArray(props.children)
+    ? props.children.reduce((memo, child) => {
+        return `${memo}${
+          Array.isArray(child)
+            ? renderServer(child, nextIndex)
+            : `${indent}\t${child}`
+        }`;
+      }, "")
+    : `${indent}\t${props.children}`;
 
   return `${indent}<${tag}${getAttrsServer(props)}>${children}${
     children ? indent : ""
