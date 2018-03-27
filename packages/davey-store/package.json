@@ -1,6 +1,6 @@
 {
   "name": "davey-store",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Dave's Alternate View Interpretation store",
   "main": "./lib/index.js",
   "source": "./index.ts",
