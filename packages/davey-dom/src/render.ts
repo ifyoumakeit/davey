@@ -28,11 +28,14 @@ const renderClient = ([tag, { children, ...props }]) => {
   const parent = document.createElement(tag);
   eachKey(props, (val, key) => getAttrFnClient(key)(parent, val, key));
 
-  if (Array.isArray(children) && typeof children[0] !== "string") {
+  if (Array.isArray(children)) {
     children.forEach(child => {
-      if (!child) return;
-      const [tag, { children = [], ...props }] = child;
-      parent.appendChild(renderClient([tag, { ...props, children }]));
+      if (typeof child === "string") {
+        parent.appendChild(document.createTextNode(child));
+      } else {
+        parent.appendChild(renderClient(child));
+      }
+      return;
     });
   } else {
     parent.appendChild(document.createTextNode(children));

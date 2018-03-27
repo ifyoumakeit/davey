@@ -2,7 +2,11 @@ import { davey } from "davey";
 import { createStore } from "davey-store";
 
 describe("getStore", () => {
-  const store = createStore({ active: false });
+  let store;
+
+  beforeEach(() => {
+    store = createStore({ active: false });
+  });
 
   test("match snapshot", () => {
     expect(store).toMatchSnapshot();
@@ -24,12 +28,17 @@ describe("getStore", () => {
   });
 
   describe("::subscribe", () => {
-    test("call listener ", () => {
-      let i = 0;
-      store.subscribe(data => {
-        expect(data.active).toEqual(i === 0 ? true : false);
+    let i = 0;
+
+    test(`call listener`, () => {
+      const removeFn = store.subscribe(data => {
+        expect(data.active).toEqual(i === 0 ? false : true);
         i++;
       });
+      store.set({ active: true });
+      
+      removeFn();
+      // This will break if listener isn't removed
       store.set({ active: false });
     });
   });

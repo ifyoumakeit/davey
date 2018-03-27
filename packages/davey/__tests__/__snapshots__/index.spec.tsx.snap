@@ -1,5 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`2-level deep nested element Resolves array of nodes match snapshot 1`] = `
+Array [
+  "div",
+  Object {
+    "children": Array [
+      1,
+      2,
+      3,
+    ],
+  },
+]
+`;
+
+exports[`2-level deep nested element Resolves text nodes match snapshot 1`] = `
+Array [
+  "h1",
+  Object {
+    "children": Array [
+      "hello ",
+      Array [
+        "span",
+        Object {
+          "children": Array [
+            "my",
+          ],
+        },
+      ],
+      Array [
+        "h2",
+        Object {
+          "children": Array [
+            "world",
+          ],
+        },
+      ],
+      "friend",
+    ],
+  },
+]
+`;
+
 exports[`2-level deep nested element match snapshot 1`] = `
 Array [
   "main",

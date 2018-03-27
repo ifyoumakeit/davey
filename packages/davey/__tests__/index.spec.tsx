@@ -70,4 +70,24 @@ describe("2-level deep nested element", () => {
       "world"
     );
   });
+
+  describe("Resolves text nodes", () => {
+    const Component = (
+      <h1>
+        hello <span>my</span>
+        <h2>world</h2>
+        friend
+      </h1>
+    );
+    test("match snapshot", () => {
+      expect(Component).toMatchSnapshot();
+    });
+  });
+
+  describe("Resolves array of nodes", () => {
+    const Component = <div>{[1, 2, 3].map(val => val)}</div>;
+    test("match snapshot", () => {
+      expect(Component).toMatchSnapshot();
+    });
+  });
 });
