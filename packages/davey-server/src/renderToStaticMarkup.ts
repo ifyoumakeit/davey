@@ -43,15 +43,18 @@ const getIndent = index => {
   return `\n${[...Array.from({ length: index })].join("\t")}`;
 };
 
-const renderServer = ({ tag, _props }, prevIndex = 0) => {
-  console.log(_props);
+const renderServer = ({ tag, props: _props }, prevIndex = 0) => {
   const { children, ...props } = _props;
   const nextIndex = prevIndex + 1;
   const indent = getIndent(nextIndex);
 
   const _children = Array.isArray(children)
     ? children.reduce((memo, child) => {
-        return `${memo}${renderServer(child, nextIndex)}`;
+        return !child
+          ? memo
+          : typeof child === "string"
+            ? `${indent}\t${children}`
+            : `${memo}${renderServer(child, nextIndex)}`;
       }, "")
     : `${indent}\t${children}`;
 
@@ -61,7 +64,6 @@ const renderServer = ({ tag, _props }, prevIndex = 0) => {
 };
 
 const renderToStaticMarkup = elements => {
-  //console.log(JSON.stringify(elements, null, 2))
   return renderServer(elements, 0).trim();
 };
 
