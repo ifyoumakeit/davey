@@ -34,10 +34,10 @@ const renderClient = ({ tag, props: _props }) => {
     children.forEach(child => {
       if (!child) {
         return;
-      } else if (typeof child === "string") {
-        parent.appendChild(document.createTextNode(child));
-      } else {
+      } else if (child instanceof Object) {
         parent.appendChild(renderClient(child));
+      } else {
+        parent.appendChild(document.createTextNode(child));
       }
       return;
     });

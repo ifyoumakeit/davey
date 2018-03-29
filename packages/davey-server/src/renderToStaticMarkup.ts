@@ -52,11 +52,11 @@ const renderServer = ({ tag, props: _props }, prevIndex = 0) => {
     ? children.reduce((memo, child) => {
         return !child
           ? memo
-          : typeof child === "string"
-            ? `${memo}${child}`
-            : `${memo}${renderServer(child, nextIndex)}`;
+          : child instanceof Object
+            ? `${memo}${renderServer(child, nextIndex)}`
+            : `${memo}${child}`;
       }, "")
-    : `${indent}\t${children}`;
+    : `${children}`;
 
   return `${indent}<${tag}${getAttrsServer(props)}>${_children}${
     _children.indexOf("<") > -1 ? indent : ""

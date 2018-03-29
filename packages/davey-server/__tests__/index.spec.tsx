@@ -66,3 +66,12 @@ describe("Appends attributes", () => {
     ).toBe("blue");
   });
 });
+
+describe("Array of intergers", () => {
+  test("match snapshot", () => {
+    document.body.innerHTML = renderToStaticMarkup(
+      <h1>{[1, 2, 3].map(v => (v % 2 ? <span>{v}</span> : v))}</h1>
+    );
+    expect(document.body).toMatchSnapshot();
+  });
+});

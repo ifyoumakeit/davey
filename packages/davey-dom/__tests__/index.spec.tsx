@@ -12,6 +12,17 @@ describe("Basic single element", () => {
   });
 });
 
+describe("Array of intergers", () => {
+  beforeAll(() => {
+    render(<h1>hello</h1>, document.body);
+  });
+
+  test("match snapshot", () => {
+    render(<h1>{[1,2,3].map(v => v % 2 ? <span>{v}</span> : v)}</h1>, document.body);
+    expect(document.body).toMatchSnapshot();
+  });
+});
+
 describe("2-level deep nested element", () => {
   beforeAll(() => {
     render(

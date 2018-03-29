@@ -15,6 +15,20 @@ exports[`2-level deep nested element match snapshot 1`] = `
 </body>
 `;
 
+exports[`Array of intergers match snapshot 1`] = `
+<body>
+  <h1>
+    <span>
+      1
+    </span>
+    2
+    <span>
+      3
+    </span>
+  </h1>
+</body>
+`;
+
 exports[`Basic single element match snapshot 1`] = `
 <body>
   <h1>
