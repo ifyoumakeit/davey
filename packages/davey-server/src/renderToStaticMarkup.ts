@@ -50,7 +50,6 @@ const renderServer = ({ tag, props: _props }, prevIndex = 0) => {
 
   const _children = Array.isArray(children)
     ? children.reduce((memo, child) => {
-      
         return !child
           ? memo
           : typeof child === "string"
@@ -59,7 +58,6 @@ const renderServer = ({ tag, props: _props }, prevIndex = 0) => {
       }, "")
     : `${indent}\t${children}`;
 
-    console.log(_children.indexOf("<") > -1, _children)
   return `${indent}<${tag}${getAttrsServer(props)}>${_children}${
     _children.indexOf("<") > -1 ? indent : ""
   }</${tag}>`;
