@@ -24,13 +24,17 @@ const eachKey = (obj, handler) => {
   }
 };
 
-const renderClient = ([tag, { children, ...props }]) => {
+const renderClient = ({ tag, props: _props }) => {
   const parent = document.createElement(tag);
+  const { children, ...props } = _props;
+
   eachKey(props, (val, key) => getAttrFnClient(key)(parent, val, key));
 
   if (Array.isArray(children)) {
     children.forEach(child => {
-      if (typeof child === "string") {
+      if (!child) {
+        return;
+      } else if (typeof child === "string") {
         parent.appendChild(document.createTextNode(child));
       } else {
         parent.appendChild(renderClient(child));

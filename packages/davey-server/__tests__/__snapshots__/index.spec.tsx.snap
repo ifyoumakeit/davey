@@ -3,31 +3,19 @@
 exports[`2-level deep nested element match snapshot 1`] = `
 "<main>
 	<header>
-		<h1>
-			hello
-		</h1>
-		<h2>
-			world
-		</h2>
+		<h1>hello</h1>
+		<h2>world</h2>
 	</header>
 </main>"
 `;
 
-exports[`Basic single element match snapshot 1`] = `
-"<h1>
-	hello
-</h1>"
-`;
+exports[`Appends attributes match snapshot 1`] = `"<button style=\\"background-color:blue;\\">hello</button>"`;
+
+exports[`Basic single element match snapshot 1`] = `"<h1>hello</h1>"`;
 
 exports[`Resolves text nodes  match snapshot 1`] = `
-"<h1>
-	hello 
-	<span>
-		my
-	</span>
-	<h2>
-		world
-	</h2>
-	friend
+"<h1>hello 
+	<span>my</span>
+	<h2>world</h2> friend
 </h1>"
 `;
