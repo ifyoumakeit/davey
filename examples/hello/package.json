@@ -8,8 +8,7 @@
   "private": true,
   "dependencies": {
     "davey": "^0.4.0",
-    "davey-dom": "^0.4.0",
-    "isomorphic-fetch": "^2.2.1"
+    "davey-dom": "^0.4.0"
   },
   "devDependencies": {
     "babel-plugin-transform-react-jsx": "^6.24.1",
