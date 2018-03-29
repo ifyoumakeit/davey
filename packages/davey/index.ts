@@ -1,5 +1,5 @@
 export interface Props {
-  children?: string | string[];
+  children?: string[];
 }
 
 export type Tag = Function | string;
