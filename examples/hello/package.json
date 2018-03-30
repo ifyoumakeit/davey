@@ -1,14 +1,14 @@
 {
   "name": "davey-example-hello-world",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "davey hello world",
   "repository": "github:ifyoumakeit/davey",
   "author": "Dave Garwacke <dave.garwacke@warbyparker.com>",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "davey": "^0.4.0",
-    "davey-dom": "^0.4.1"
+    "davey": "^0.4.2",
+    "davey-dom": "^0.4.2"
   },
   "devDependencies": {
     "babel-plugin-transform-react-jsx": "^6.24.1",
