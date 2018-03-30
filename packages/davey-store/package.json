@@ -4,7 +4,7 @@
   "description": "Dave's Alternate View Interpretation store",
   "main": "./lib/index.js",
   "source": "./index.ts",
-  "repository": "git@github.com:ifyoumakeit/davey.git",
+  "repository": "github:ifyoumakeit/davey",
   "author": "Dave Garwacke <dave.garwacke@warbyparker.com>",
   "license": "MIT"
 }

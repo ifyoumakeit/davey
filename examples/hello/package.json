@@ -2,7 +2,7 @@
   "name": "davey-example-hello-world",
   "version": "0.4.1",
   "description": "davey hello world",
-  "repository": "git@github.com:ifyoumakeit/davey.git",
+  "repository": "github:ifyoumakeit/davey",
   "author": "Dave Garwacke <dave.garwacke@warbyparker.com>",
   "license": "MIT",
   "private": true,
