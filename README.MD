@@ -11,10 +11,10 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
 
 ## Packages
 
-* davey
-* davey-dom
-* davey-server
-* davey-store
+* [davey](https://www.npmjs.com/package/davey)
+* [davey-dom](https://www.npmjs.com/package/davey-dom)
+* [davey-server](https://www.npmjs.com/package/davey-server)
+* [davey-store](https://www.npmjs.com/package/davey-store)
 
 ## Features
 
@@ -33,7 +33,17 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
 * [x] Bundling with Parcel
 * [x] Transpilation with Babel
 
-## Examples (in examples folder)
+## CodeSandbox Examples (also in examples folder)
 
-https://codesandbox.io/s/github/ifyoumakeit/davey/tree/master/examples/hello
-https://codesandbox.io/s/github/ifyoumakeit/davey/tree/master/examples/isomorphic
+* [Hello World](https://codesandbox.io/s/github/ifyoumakeit/davey/tree/master/examples/hello)
+* [Isomorphic](https://codesandbox.io/s/github/ifyoumakeit/davey/tree/master/examples/isomorphic)
+
+# Quick start
+
+1. `git clone git@github.com:ifyoumakeit/davey-starter.git`
+2. `cd davey-starter`
+3. `yarn`
+4. `yarn build`
+
+
+
