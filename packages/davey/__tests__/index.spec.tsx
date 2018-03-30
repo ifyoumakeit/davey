@@ -2,12 +2,18 @@ import { davey } from "davey";
 
 describe("Basic single element", () => {
   const ComponentJsx = <h1>hello</h1>;
+  const ComponentProps = <h1 children="hello" />;
   const ComponentFn = davey("h1", null, "hello");
 
   test("jsx === function", () => {
     expect(ComponentJsx).toEqual(ComponentFn);
   });
-  [ComponentJsx, ComponentFn].forEach(Component => {
+
+  test("jsx === props", () => {
+    expect(ComponentJsx).toEqual(ComponentProps);
+  });
+
+  [ComponentJsx, ComponentFn, ComponentProps].forEach(Component => {
     test("match snapshot", () => {
       expect(Component).toMatchSnapshot();
     });

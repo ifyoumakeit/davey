@@ -95,3 +95,14 @@ Object {
   "tag": "h1",
 }
 `;
+
+exports[`Basic single element match snapshot 3`] = `
+Object {
+  "props": Object {
+    "children": Array [
+      "hello",
+    ],
+  },
+  "tag": "h1",
+}
+`;

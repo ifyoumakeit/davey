@@ -5,12 +5,14 @@ export interface Props {
 export type Tag = Function | string;
 
 export const davey = (tag: Tag, _props: Props = {}, ...rest: string[]) => {
-  const children = rest.length ? rest : _props.children || [];
+  // Get children from third argument or from props.
+  const _children = rest.length ? rest : (_props && _props.children) || [];
+
   const props = {
     ..._props,
-    children: children.reduce((acc, child) => {
-      return Array.isArray(child) ? acc.concat([...child]) : acc.concat(child);
-    }, []),
+    children: []
+      .concat(_children)
+      .reduce((acc, child) => acc.concat(child), []),
   };
 
   return typeof tag === "function" ? tag(props) : { tag, props };
