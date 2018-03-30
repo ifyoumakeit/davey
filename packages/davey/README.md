@@ -10,7 +10,7 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
 
 ## JSX
 
-### Use w/ Typscript
+### Use w/ Typescript
 
 1.  Add below your **tsconfig.json**
 
@@ -33,3 +33,11 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
   "plugins": [["transform-react-jsx", { "pragma": "davey" }]]
 }
 ```
+
+# Quick start
+
+1. `git clone git@github.com:ifyoumakeit/davey-starter.git`
+2. `cd davey-starter`
+3. `yarn`
+4. `yarn build`
+
