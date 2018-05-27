@@ -9,6 +9,8 @@ node_js:
   - '8'  
 before_install:
   - npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
+  - git config --global user.email "travis@travis-ci.org"
+  - git config --global user.name "Travis CI"
   - yarn lerna bootstrap
 after_success: .travis/after_success.sh
 branches:
