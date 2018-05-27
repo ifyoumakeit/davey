@@ -1,16 +1,16 @@
 {
   "name": "davey-example-isomorphic",
-  "version": "0.4.5",
+  "version": "0.5.0",
   "description": "davey isomorphic example",
   "repository": "github:ifyoumakeit/davey",
   "author": "Dave Garwacke <dave.garwacke@warbyparker.com>",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "davey": "^0.4.5",
-    "davey-dom": "^0.4.5",
-    "davey-server": "^0.4.5",
-    "davey-store": "^0.4.5",
+    "davey": "^0.5.0",
+    "davey-dom": "^0.5.0",
+    "davey-server": "^0.5.0",
+    "davey-store": "^0.5.0",
     "isomorphic-fetch": "^2.2.1"
   },
   "devDependencies": {
