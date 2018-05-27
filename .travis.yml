@@ -8,8 +8,8 @@ notifications:
 node_js:
   - '8'  
 before_script:
-  - chmod +x ./travis/setup-mysql.sh
-after_success: .travis/after_success.sh
+  - chmod +x ./travis/after_success.sh
+after_success: ./travis/after_success.sh
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
