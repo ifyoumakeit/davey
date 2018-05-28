@@ -16,6 +16,10 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
 * [davey-server](https://www.npmjs.com/package/davey-server)
 * [davey-store](https://www.npmjs.com/package/davey-store)
 
+## Deployment
+
+Davey uses Lerna with conventional commits through TravisCI.
+
 ## Features
 
 * [x] JX2JSX
@@ -40,10 +44,7 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
 
 # Quick start
 
-1. `git clone git@github.com:ifyoumakeit/davey-starter.git`
-2. `cd davey-starter`
-3. `yarn`
-4. `yarn build`
-
-
-
+1.  `git clone git@github.com:ifyoumakeit/davey-starter.git`
+2.  `cd davey-starter`
+3.  `yarn`
+4.  `yarn build`
