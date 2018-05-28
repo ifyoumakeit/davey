@@ -1,6 +1,6 @@
 {
   "name": "davey-server",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Dave's Alternate View Interpretation DOM helpers",
   "main": "./lib/index.js",
   "source": "./index.ts",
