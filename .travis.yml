@@ -17,7 +17,7 @@ script:
   - yarn test    
 after_success:
   - npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
-  - git config --global user.email $GITHUB_EMAIL
+  - git config --global user.user $GITHUB_EMAIL
   - git config --global user.token $GITHUB_TOKEN
   - .travis/after_success.sh  
 branches:

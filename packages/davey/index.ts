@@ -4,7 +4,8 @@ export interface Props {
 
 export type Tag = Function | string;
 
-export const davey = (tag: Tag, _props: Props = {}, ...rest: string[]) => {  
+export const davey = (tag: Tag, _props: Props = {}, ...rest: string[]) => {
+  // Get children from third argument or from props
   const _children = rest.length ? rest : (_props && _props.children) || [];
 
   const props = {
