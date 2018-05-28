@@ -10,8 +10,10 @@ node_js:
 deploy:
   provider: releases
   api_key: $GITHUB_TOKEN
+  on:
+    tags: true
 install:
-  - yarn --pure-lockfile
+  - yarn
 before_script:   
   - lerna updated --json
 script:  
@@ -21,6 +23,7 @@ after_success:
   - npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
   - git config --global user.email $GITHUB_EMAIL
   - git config --global user.token $GITHUB_TOKEN
+  - git diff
   - .travis/after_success.sh  
 branches:
   except:
