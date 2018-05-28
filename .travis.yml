@@ -7,24 +7,11 @@ notifications:
   email: false
 node_js:
   - '8'  
-deploy:
-  provider: releases
-  api_key: $GITHUB_TOKEN
-  on:
-    tags: true
 install:
   - yarn
-before_script:   
-  - lerna updated --json
 script:  
   - yarn build
-  - yarn test    
-after_success:
-  - npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
-  - git config --global user.email $GITHUB_EMAIL
-  - git config --global user.token $GITHUB_TOKEN
-  - git diff
-  - .travis/after_success.sh  
-branches:
-  except:
-    - /^v\d+\.\d+\.\d+$/
+  - yarn test 
+  - yarn lerna updated --json
+before_install: .travis/before_install.sh
+after_success: .travis/after_success.sh  
