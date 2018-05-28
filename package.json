@@ -5,10 +5,7 @@
   "author": "Dave Garwacke <dave.garwacke@warbyparker.com>",
   "license": "MIT",
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "examples/*"
-  ],
+  "workspaces": ["packages/*", "examples/*"],
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^22.2.2",
@@ -25,12 +22,14 @@
   "scripts": {
     "commit": "git add . && git cz",
     "publish": "yarn build && yarn test && yarn lerna publish",
-    "clean": "yarn clean:davey && yarn clean:davey-dom && yarn clean:davey-server && yarn clean:davey-store",
+    "clean":
+      "yarn clean:davey && yarn clean:davey-dom && yarn clean:davey-server && yarn clean:davey-store",
     "clean:davey": "rm -rf packages/davey/lib",
     "clean:davey-dom": "rm -rf packages/davey-dom/lib",
     "clean:davey-server": "rm -rf packages/davey-server/lib",
     "clean:davey-store": "rm -rf packages/davey-store/lib",
-    "build": "yarn build:davey & yarn build:davey-dom & yarn build:davey-server & yarn build:davey-store",
+    "build":
+      "yarn build:davey & yarn build:davey-dom & yarn build:davey-server & yarn build:davey-store",
     "build:davey": "microbundle --cwd packages/davey",
     "build:davey-dom": "microbundle --cwd packages/davey-dom",
     "build:davey-server": "microbundle --cwd packages/davey-server",
@@ -52,14 +51,7 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
     "moduleNameMapper": {
       "davey$": "<rootDir>/packages/davey/index.ts",
       "davey-dom$": "<rootDir>/packages/davey-dom/index.ts",

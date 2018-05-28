@@ -10,5 +10,5 @@ fi
 if [[ $TRAVIS_BRANCH == 'master' ]]; then
   echo "Releasing from master.."
   git checkout master
-  yarn lerna publish --conventional-commits --yes
+  yarn lerna publish --conventional-commits --yes --changelog-preset conventional
 fi
