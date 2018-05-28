@@ -7,17 +7,19 @@ notifications:
   email: false
 node_js:
   - '8'  
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
 install:
   - yarn --pure-lockfile
-before_script:  
-  - git checkout master
+before_script:   
   - lerna updated --json
 script:  
   - yarn build
   - yarn test    
 after_success:
   - npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
-  - git config --global user.user $GITHUB_EMAIL
+  - git config --global user.email $GITHUB_EMAIL
   - git config --global user.token $GITHUB_TOKEN
   - .travis/after_success.sh  
 branches:
