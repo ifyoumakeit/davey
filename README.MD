@@ -13,12 +13,12 @@ Using my brain to recreate React, Redux and CSS-in-JS from scratch/memory. I pro
 
 <!-- START pkgtoc, keep to allow update -->
 
-| Version                                                                                 | Packages                                                                                      |
-| :-------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------- |
-| ![davey npm badge)](https://img.shields.io/npm/v/davey.svg?colorB=cb3837)               | **[davey](packages/davey)**<br>Dave's Alternate View Interpretation                           |
-| ![davey-dom npm badge)](https://img.shields.io/npm/v/davey-dom.svg?colorB=cb3837)       | **[davey-dom](packages/davey-dom)**<br>Dave's Alternate View Interpretation DOM helpers       |
-| ![davey-server npm badge)](https://img.shields.io/npm/v/davey-server.svg?colorB=cb3837) | **[davey-server](packages/davey-server)**<br>Dave's Alternate View Interpretation DOM helpers |
-| ![davey-store npm badge)](https://img.shields.io/npm/v/davey-store.svg?colorB=cb3837)   | **[davey-store](packages/davey-store)**<br>Dave's Alternate View Interpretation store         |
+| Version                                                                                 | Packages                                                                               |
+| :-------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------- |
+| ![davey npm badge)](https://img.shields.io/npm/v/davey.svg?colorB=cb3837)               | **[davey](packages/davey)**<br>Davey helps you build UIs                               |
+| ![davey-dom npm badge)](https://img.shields.io/npm/v/davey-dom.svg?colorB=cb3837)       | **[davey-dom](packages/davey-dom)**<br>Davey package for working with the DOM          |
+| ![davey-server npm badge)](https://img.shields.io/npm/v/davey-server.svg?colorB=cb3837) | **[davey-server](packages/davey-server)**<br>Davey package for working with the server |
+| ![davey-store npm badge)](https://img.shields.io/npm/v/davey-store.svg?colorB=cb3837)   | **[davey-store](packages/davey-store)**<br>Redux-like store                            |
 
 <!-- END pkgtoc, keep to allow update -->
 

@@ -1,7 +1,7 @@
 {
   "name": "davey-dom",
   "version": "0.6.1",
-  "description": "Dave's Alternate View Interpretation DOM helpers",
+  "description": "Davey package for working with the DOM",
   "main": "./lib/index.js",
   "source": "./index.ts",
   "repository": "github:ifyoumakeit/davey",

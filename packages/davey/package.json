@@ -1,7 +1,7 @@
 {
   "name": "davey",
   "version": "0.6.2",
-  "description": "Dave's Alternate View Interpretation",
+  "description": "Davey helps you build UIs",
   "main": "./lib/index.js",
   "source": "./index.ts",
   "repository": "github:ifyoumakeit/davey",

@@ -1,7 +1,7 @@
 {
   "name": "davey-store",
   "version": "0.6.1",
-  "description": "Dave's Alternate View Interpretation store",
+  "description": "Redux-like store",
   "main": "./lib/index.js",
   "source": "./index.ts",
   "repository": "github:ifyoumakeit/davey",
