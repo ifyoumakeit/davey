@@ -19,6 +19,7 @@
     "jest": "^22.4.3",
     "lerna": "^2.11.0",
     "microbundle": "^0.4.4",
+    "pkgtoc": "^0.1.1",
     "ts-jest": "^22.4.2",
     "ts-node": "^5.0.1",
     "typescript": "^2.7.2"
