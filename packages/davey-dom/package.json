@@ -1,6 +1,6 @@
 {
   "name": "davey-dom",
-  "version": "0.6.1",
+  "version": "0.6.3",
   "description": "Davey package for working with the DOM",
   "main": "./lib/index.js",
   "source": "./index.ts",

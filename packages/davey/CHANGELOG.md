@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.6.3"></a>
+## <small>0.6.3 (2018-06-04)</small>
+
+* docs: update package descriptions ([ce8e7b2](https://github.com/ifyoumakeit/davey/commit/ce8e7b2))
+
+
+
+
 <a name="0.6.2"></a>
 ## <small>0.6.2 (2018-05-28)</small>
 

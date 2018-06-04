@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.6.3"></a>
+## <small>0.6.3 (2018-06-04)</small>
+
+* docs: add pkgtoc to generate table of contents ([2c145c4](https://github.com/ifyoumakeit/davey/commit/2c145c4))
+* docs: update package descriptions ([ce8e7b2](https://github.com/ifyoumakeit/davey/commit/ce8e7b2))
+* refactor: who cares ([a0dc683](https://github.com/ifyoumakeit/davey/commit/a0dc683))
+* style: ([4d87bec](https://github.com/ifyoumakeit/davey/commit/4d87bec))
+* feat: finally get lerna and travis working ([5d3d21c](https://github.com/ifyoumakeit/davey/commit/5d3d21c))
+* feat: i have no idea what lerna does anymore ([8e35633](https://github.com/ifyoumakeit/davey/commit/8e35633))
+
+
+### BREAKING CHANGE
+
+* separate from manual releases
+
+
+
 <a name="0.6.2"></a>
 ## <small>0.6.2 (2018-05-28)</small>
 

@@ -1,6 +1,6 @@
 {
   "name": "davey-store",
-  "version": "0.6.1",
+  "version": "0.6.3",
   "description": "Redux-like store",
   "main": "./lib/index.js",
   "source": "./index.ts",

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.6.3"></a>
+## <small>0.6.3 (2018-06-04)</small>
+
+
+
+
+
+**Note:** Version bump only for package davey-example-isomorphic
+
 <a name="0.6.2"></a>
 ## <small>0.6.2 (2018-05-28)</small>
 

@@ -1,6 +1,6 @@
 {
   "name": "davey",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Davey helps you build UIs",
   "main": "./lib/index.js",
   "source": "./index.ts",
